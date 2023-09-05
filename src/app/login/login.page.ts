@@ -15,10 +15,10 @@ import { UserModel } from '../models/UserModel';
 export class LoginPage implements OnInit {
 
   listUser: UserModel[] = [
-    new UserModel('Jorge','Gomez','jgomez@gmail.com',undefined,'USUARIO','jgomez','jorge123'),
-    new UserModel('Juan','Perez','jperez@gmail.com',undefined,'ADMIN','jperez','juan123'),
-    new UserModel('Carlos','Gomez','cgomez@gmail.com',undefined,'USUARIO','cgomez','carlos123'),
-    new UserModel('Valentina','Gomez','vgomez@gmail.com',undefined,'ADMIN','vgomez','valentina123')
+    new UserModel('Jorge','Gomez','jgomez@gmail.com',undefined,'ALUMNO','jgomez','jorge123'),
+    new UserModel('Juan','Perez','jperez@gmail.com',undefined,'CONDUCTOR','jperez','juan123'),
+    new UserModel('Carlos','Gomez','cgomez@gmail.com',undefined,'ALUMNO','cgomez','carlos123'),
+    new UserModel('Valentina','Gomez','vgomez@gmail.com',undefined,'CONDUCTOR','vgomez','valentina123')
   ];
 
   userLoginModal: IUserLogin = {
@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
             user: this.listUser[i]
           }
         }
-        if(this.listUser[i].type == 'USUARIO'){
+        if(this.listUser[i].type == 'ALUMNO'){
           let sendInfo = this.route.navigate(['/alumno'], userInfoSend);
           return true;
         }else{
