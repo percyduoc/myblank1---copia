@@ -14,13 +14,17 @@ import { Router } from '@angular/router';
 })
 export class ConductorPage implements OnInit {
 
-  adminInfoReceived: UserModel | undefined;
+  conductorInfoReceived: UserModel | undefined;
 
   constructor(private r: Router) {
-    this.adminInfoReceived = this.r.getCurrentNavigation()?.extras.state?.['user'];
+    this.conductorInfoReceived = this.r.getCurrentNavigation()?.extras.state?.['user'];
    }
 
   ngOnInit() {
   }
+  volverinicio(){
+    this.r.navigate(['/login']);
+  }
+  
 
 }

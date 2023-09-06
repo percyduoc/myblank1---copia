@@ -15,10 +15,10 @@ import { UserModel } from '../models/UserModel';
 export class LoginPage implements OnInit {
 
   listUser: UserModel[] = [
-    new UserModel('Jorge','Gomez','jgomez@gmail.com',undefined,'ALUMNO','jgomez','jorge123'),
-    new UserModel('Juan','Perez','jperez@gmail.com',undefined,'CONDUCTOR','jperez','juan123'),
-    new UserModel('Carlos','Gomez','cgomez@gmail.com',undefined,'ALUMNO','cgomez','carlos123'),
-    new UserModel('Valentina','Gomez','vgomez@gmail.com',undefined,'CONDUCTOR','vgomez','valentina123')
+    new UserModel('Percy','Suares','jgomez@gmail.com',undefined,'ALUMNO','percy','percy123'),
+    new UserModel('Eduardo','Donoso','jperez@gmail.com',undefined,'CONDUCTOR','edonoso','eduardo123'),
+    new UserModel('Pedro','sanchez','cgomez@gmail.com',undefined,'ALUMNO','psanchez','pedro123'),
+    new UserModel('Celeste','Ramirez','vgomez@gmail.com',undefined,'CONDUCTOR','cramirez','celeste123')
   ];
 
   userLoginModal: IUserLogin = {
@@ -59,4 +59,7 @@ export class LoginPage implements OnInit {
     this.userLoginModal.username = '';
     this.userLoginModal.password = '';
   }
+// +++++++++++++++++++++++++++++++++++++++
+
+
 }

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,13 +14,14 @@
   <ion-grid>
     
     <ion-row> 
-      <ion-col sizeLg="6" sizeMD="4" sizeXs="6" >
-
+      <ion-col id="col1" sizeLg="12" sizeMD="12" sizeXs="12" >
+        <div class="card car1"><h2>Bienvenido a llevaApp</h2></div>
+       
+        
       </ion-col>
-      <ion-col sizeLg="6" sizeMD="4" sizeXs="6" >
+      <ion-col sizeLg="12" sizeMD="12" sizeXs="12" >
         <div id="div-fondo">
           <div>
-            <ion-label class="center-content">Inicio </ion-label>
             <ion-input class="center-content" label="Nombre de usuario" [(ngModel)]="userLoginModal.username"></ion-input>
             <ion-input class="center-content" label="Contraseña" [(ngModel)]="userLoginModal.password"></ion-input>
           </div>
@@ -28,13 +29,15 @@
             <!--
               Navigación con una función.
             -->
-            <ion-button color="0"id="butoninicio" (click)="userLogin(userLoginModal)">Inicio de secion</ion-button>
+            <ion-button color="0"id="butoninicio" expand="block" (click)="userLogin(userLoginModal)">Inicio </ion-button>
           </div>
           <div>
             <!--
               Navegación via HTML.
             -->
-            <ion-button id="butoninici1"  [routerLink]="['/usuario',userLoginModal.username]">Go to Usuario with HREF</ion-button>
+            <ion-button id="butoninici1" expand="block" [routerLink]="['/home']">Olvido la contraseña</ion-button>
+           
+
           </div>
         </div>
       </ion-col>
