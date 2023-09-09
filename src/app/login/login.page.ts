@@ -42,10 +42,10 @@ export class LoginPage implements OnInit {
           }
         }
         if(this.listUser[i].type == 'ALUMNO'){
-          let sendInfo = this.route.navigate(['/alumno'], userInfoSend);
+          this.route.navigate(['/alumno'], userInfoSend);
           return true;
         }else{
-          let sendInfo = this.route.navigate(['/conductor'], userInfoSend);
+         this.route.navigate(['/conductor'], userInfoSend);
           return true;
         }
       }
